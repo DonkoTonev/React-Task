@@ -1,9 +1,17 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* width: 100%; */
+}
+
+
 .container {
   /* width: 100%; */
   width: 786px;
   height: 244px;
   position: relative;
-  /* top: 352px; */
+  top: 352px;
   left: 327px;
   /* background-color: blue; */
 }
@@ -11,9 +19,9 @@
 .question {
   width: 583px;
   height: 88px;
-  /* left: 102px; */
+  left: 102px;
   position: relative;
-  /* margin-bottom: 16px; */
+  margin-bottom: 16px;
   /* background-color: brown; */
   font-family: Grange;
   font-size: 40px;
@@ -26,33 +34,23 @@
   width: 786px;
   height: 44px;
   top: 120px;
+  /* position: relative; */
   gap: 10px;
   /* background-color: aqua; */
   justify-content: center;
   display: flex;
 }
 
-.answers-list {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.answer-item {
-  gap: 10px;
-  display: flex;
-}
-
 .answer {
   width: 189px;
   height: 44px;
-  gap: 9px;
+  gap: 8px;
   border-radius: 8px;
   border: 1px solid #5bc1ed;
   /* background-color: azure; */
   display: flex;
   justify-content: center;
+  padding: 14px 40px 14px 20px;
   align-items: center;
 }
 
@@ -64,7 +62,7 @@
   /* text-align: left; */
   width: 129px;
   height: 16px;
-  text-align: center;
+  text-align: left;
   /* margin-left: 8px; */
   margin: 9px auto;
 }
@@ -82,7 +80,7 @@
   align-items: center;
 }
 
-.button {
+.button-next {
   width: 189px;
   height: 48px;
   padding: 14px 40px 14px 40px;
@@ -100,7 +98,24 @@
   line-height: 19.49px;
   text-align: center;
   width: 98px;
+  display: flex;
   height: 19px;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.arrow {
+  width: 14.14px;
+  height: 14.14px;
+  top: -0px;
+  left: 10px;
+  gap: 0px;
+  opacity: 0px;
+  /* angle: -45 deg; */
+
 }
 
 .back-link {
