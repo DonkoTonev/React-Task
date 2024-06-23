@@ -5,13 +5,13 @@ body, html, #root {
   /* width: 100%; */
 }
 
-.container {
+.home-container {
   /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
+  width: 1440px;
+  height: 526px;
 }
 
 .image-container {
@@ -19,7 +19,30 @@ body, html, #root {
   position: relative;
   display: inline-block;
   /* background: #00000059; */
+  
+
 }
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000059;
+  z-index: 1;
+}
+
+.image-container img {
+  display: block;
+  /* width: 100%; */
+  /* height: auto; */
+  position: relative;
+  z-index: 0;
+}
+
+
 
 .top-image {
   /* width: 100%; */
@@ -38,6 +61,7 @@ body, html, #root {
   width: 583px;
   height: 207px;
   gap: 24px;
+  z-index: 2;
 }
 
 @media (max-width: 1440px) {
@@ -85,13 +109,16 @@ body, html, #root {
   text-align: center;
   border-radius: 8px;
   margin-top: 24px;
+  color: #1C2635;
   
 }
 
-.button-text {
+.home-button-text {
   font-family: Proxima Nova;
   font-size: 16px;
   font-weight: 500;
   line-height: 19.49px;
   text-align: center;
+  color: #1C2635;
 }
+
