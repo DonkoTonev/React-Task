@@ -1,27 +1,37 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
-import image from '../assets/image.jpg'
+import image from '../assets/image.jpg'; // Adjust the path to your image
 
 export default function Home() {
-  const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);
+    // const history = useHistory();
 
-  return (
-    <div className="container">
-      <div className="image-container">
-        <img src={image} className="top-image" alt="Descriptive Alt Text" />
-        <div className="centered-div">
-          
-          <div className="title-container">
-            Build a self care routine suitable for you
-            <div className="text-container">
-              Take out test to get a personalised self care routine based on your needs.
+    // const handleClick = () => {
+    //     history.push('/first'); // Navigate to '/first' route
+    // };
+
+    return (
+        <div className="container">
+            <div className="image-container">
+                <img src={image} className="top-image" alt="Descriptive Alt Text" />
+                <div className="centered-div">
+                    <div className="title-container">
+                        Build a self care routine suitable for you
+                        <div className="text-container">
+                            Take our test to get a personalized self care routine based on your needs.
+                        </div>
+                    </div>
+                    {/* Using Link for navigation */}
+                    <Link to="/first" className='start-button'>
+                        <span className='button-text'>Start the quiz</span>
+                    </Link>
+                    {/* Alternatively, you can use a button with handleClick function */}
+                    {/* <button className='start-button' onClick={handleClick}>
+                        <span className='button-text'>Start the quiz</span>
+                    </button> */}
+                </div>
             </div>
-          </div>
-          <button className='start-button'><span className='button-text'>Start the quiz</span></button>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
-
-// export default Home;
