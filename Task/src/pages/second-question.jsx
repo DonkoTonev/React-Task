@@ -3,7 +3,9 @@ import { useState } from 'react';
 import '../styles/Question.css';
 import ProgressBar from './components/progress-bar';
 import { Link } from 'react-router-dom';
-
+import fontawesome from '@fortawesome/fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function SecondQuestion() {
     const [count, setCount] = useState(0);
@@ -25,12 +27,18 @@ export default function SecondQuestion() {
 
             <div className='next-back'>
                 <a href='/first' className='back-link'>Back</a>
-                {/* <button className='button'><span className='button-text'>Next question</span></button> */}
-                <Link to="/third" className='button'><span className='button-text'>Next question</span></Link>
+                <button className='button-next'>
+                    <Link to="/third">
+                    <span className='button-text'>Next question</span>
+                    
+                    </Link>
+                    <FontAwesomeIcon className='arrow-icon' icon={faArrowRight} />
+                </button>
+                {/* <button to="/first" className='button'><span className='button-text'>Next question</span></button> */}
             </div>
         </div>
 
-        <ProgressBar />
+        {/* <ProgressBar /> */}
         </>
     );
 }
