@@ -9,7 +9,7 @@ import SecondQuestion from './pages/second-question';
 import ThirdQuestion from './pages/third-question';
 import FourthQuestion from './pages/fourth-question';
 import FiveQuestion from './pages/five-question';
-
+import Results from './pages/results';
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,7 @@ export default function App() {
           <Route path='/third' element={<ThirdQuestion />} />
           <Route path='/fourth' element={<FourthQuestion />} />
           <Route path='/fifth' element={<FiveQuestion />} />
+          <Route path='/results' element={<Results />} />
       </Routes>
     </BrowserRouter>
   );

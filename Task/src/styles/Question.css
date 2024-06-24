@@ -13,7 +13,7 @@ body, html, #root {
   position: relative;
   top: 352px;
   left: 327px;
-  /* background-color: blue; */
+  /* display: inline-flex; */
 }
 
 .question {
@@ -36,30 +36,61 @@ body, html, #root {
   top: 120px;
   /* position: relative; */
   gap: 10px;
-  /* background-color: aqua; */
   justify-content: center;
+  /* display: inline-flex; */
+  width: fit-content;
+
+
+
   display: flex;
+  flex-wrap: wrap;
+  max-width: 985px;
 }
 
+
 .answer {
+  border-radius: 8px;
+  border: 1px solid #5bc1ed;
+  /* display: inline-flex; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+  min-width: 189px;
+  height: 44px;
+  text-align: left;
+  /* max-width: 928px; */
+}
+
+.answer:hover {
+  background-color: #e0f7ff;
+}
+
+.answer-text {
+  white-space: nowrap;
+}
+
+/* .answer {
   width: 189px;
   height: 44px;
   gap: 8px;
   border-radius: 8px;
   border: 1px solid #5bc1ed;
-  /* background-color: azure; */
   display: flex;
   justify-content: center;
   padding: 14px 40px 14px 20px;
   align-items: center;
-}
+} */
 
 .answer-text {
   font-family: Proxima Nova;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  /* text-align: left; */
   width: 129px;
   height: 16px;
   text-align: left;
@@ -68,7 +99,6 @@ body, html, #root {
 }
 
 .next-back {
-  /* background-color: blueviolet; */
   width: 244px;
   height: 48px;
   top: 196px;
@@ -78,6 +108,7 @@ body, html, #root {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  /* margin-top: 20px; */
 }
 
 .button-next {

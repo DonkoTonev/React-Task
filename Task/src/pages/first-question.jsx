@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import '../styles/Question.css';
 import ProgressBar from './components/progress-bar';
@@ -12,7 +12,19 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function FirstQuestion() {
     const [count, setCount] = useState(0);
 
-  fontawesome.library.add(faArrowRight);
+    const [answer, setAnswer] = useState('');
+
+    useEffect(() => {
+        const storedAnswers = JSON.parse(localStorage.getItem('answers')) || {};
+        setAnswer(storedAnswers.firstQuestion || '');
+    }, []);
+
+    const handleAnswer = (answer) => {
+        setAnswer(answer);
+        const storedAnswers = JSON.parse(localStorage.getItem('answers')) || {};
+        storedAnswers.firstQuestion = answer;
+        localStorage.setItem('answers', JSON.stringify(storedAnswers));
+    };
 
   return (
     // <BrowserRouter>
@@ -22,10 +34,18 @@ export default function FirstQuestion() {
           What's your hair type or texture?
         </div>
         <div className='answers-container'>
-          <button className='answer'><span className='answer-text'>a. Straight</span></button>
-          <button className='answer'><span className='answer-text'>b. Curly</span></button>
-          <button className='answer'><span className='answer-text'>c. Wavy</span></button>
-          <button className='answer'><span className='answer-text'>d. Fine</span></button>
+            <button onClick={() => handleAnswer('Straight')} className='answer'>
+                <span className='answer-text'>a. Straight</span>
+            </button>
+            <button onClick={() => handleAnswer('Curly')} className='answer'>
+                <span className='answer-text'>b. Curly</span>
+            </button>
+            <button onClick={() => handleAnswer('Wavy')} className='answer'>
+                <span className='answer-text'>c. Wavy</span>
+            </button>
+            <button onClick={() => handleAnswer('Fine')} className='answer'>
+                <span className='answer-text'>d. Fine</span>
+            </button>
         </div>
 
         <div className='next-back'>
@@ -40,7 +60,7 @@ export default function FirstQuestion() {
           {/* <button to="/first" className='button'><span className='button-text'>Next question</span></button> */}
         </div>
       </div>
-      {/* {/* <ProgressBar /> */}
+      <ProgressBar current={1} total={5} />
     </>
     // {/* </BrowserRouter> */}
   );
