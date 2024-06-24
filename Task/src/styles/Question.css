@@ -1,19 +1,17 @@
-body, html, #root {
+body,
+html,
+#root {
   margin: 0;
   padding: 0;
   height: 100%;
-  /* width: 100%; */
 }
 
-
 .container {
-  /* width: 100%; */
   width: 786px;
-  height: 244px;
+  min-height: 244px;
   position: absolute;
-  top: 352px;
+  top: 35%;
   left: 327px;
-  /* display: inline-flex; */
 }
 
 .question {
@@ -22,36 +20,31 @@ body, html, #root {
   left: 102px;
   position: relative;
   margin-bottom: 16px;
-  /* background-color: brown; */
   font-family: Grange;
   font-size: 40px;
   font-weight: 500;
   line-height: 44px;
   text-align: center;
+  min-height: 88px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .answers-container {
-  width: 786px;
+  width: 100%;
   height: 44px;
   top: 120px;
-  /* position: relative; */
   gap: 10px;
   justify-content: center;
-  /* display: inline-flex; */
-  width: fit-content;
-
-
-
   display: flex;
   flex-wrap: wrap;
   max-width: 985px;
+  margin-bottom: 50px;
 }
-
 
 .answer {
   border-radius: 8px;
   border: 1px solid #5bc1ed;
-  /* display: inline-flex; */
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
@@ -61,9 +54,7 @@ body, html, #root {
   transition: background-color 0.3s;
   width: fit-content;
   min-width: 189px;
-  height: 44px;
   text-align: left;
-  /* max-width: 928px; */
 }
 
 .answer:hover {
@@ -74,18 +65,6 @@ body, html, #root {
   white-space: nowrap;
 }
 
-/* .answer {
-  width: 189px;
-  height: 44px;
-  gap: 8px;
-  border-radius: 8px;
-  border: 1px solid #5bc1ed;
-  display: flex;
-  justify-content: center;
-  padding: 14px 40px 14px 20px;
-  align-items: center;
-} */
-
 .answer-text {
   font-family: Proxima Nova;
   font-size: 16px;
@@ -94,7 +73,6 @@ body, html, #root {
   width: 129px;
   height: 16px;
   text-align: left;
-  /* margin-left: 8px; */
   margin: 9px auto;
 }
 
@@ -108,7 +86,6 @@ body, html, #root {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* margin-top: 20px; */
 }
 
 .button-next {
@@ -118,7 +95,6 @@ body, html, #root {
   gap: 8px;
   border-radius: 8px;
   display: flex;
-  /* margin-left: 100%; */
   background: #c3edff;
 }
 
@@ -145,8 +121,6 @@ body, html, #root {
   left: 10px;
   gap: 0px;
   opacity: 0px;
-  /* angle: -45 deg; */
-
 }
 
 .back-link {
@@ -165,4 +139,9 @@ body, html, #root {
   justify-content: center;
   align-items: center;
   text-decoration: underline;
+}
+
+.progress_bar {
+  top: 35%;
+  position: absolute;
 }
