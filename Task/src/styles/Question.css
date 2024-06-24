@@ -10,7 +10,7 @@ body, html, #root {
   /* width: 100%; */
   width: 786px;
   height: 244px;
-  position: relative;
+  position: absolute;
   top: 352px;
   left: 327px;
   /* display: inline-flex; */

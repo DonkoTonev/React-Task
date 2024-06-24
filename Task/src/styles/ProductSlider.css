@@ -73,7 +73,7 @@
 .product_image {
     width: 350px;
     height: 345px;
-    border-radius: 8px 0px 0px 0px;
+    border-radius: 8px;
 
 }
 
@@ -157,6 +157,49 @@
     height: 9px;
     background-color: beige;
     border-radius: 50% / 100%;
+
+    /* position: absolute; */
+
+}
+
+.prev_icon {
+    left: 10px;
+
+    width: 60.06px;
+    height: 60.06px;
+    top: 670px;
+    /* left: 1310px; */
+    border-radius: 30.03px;
+    position: absolute;
+    
+    background: #EEF7FB;
+}
+
+.image_component {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.icon_heart {
+    width: 24px;
+    height: 24px;
+    top: 17px;
+    left: 310px;
+    position: relative;
+    /* background-color: black; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heart_icon {
+    width: 20px;
+    height: 18.35px;
+    top: 19.65px;
+    left: 312px;
+    background-color: white;
 
     /* position: absolute; */
 
