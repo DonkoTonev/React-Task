@@ -27,7 +27,7 @@
     left: 60px;
     gap: 16px;
 
-    position: absolute;    
+    position: absolute;
 }
 
 
@@ -40,7 +40,7 @@
 
 }
 
-.title {
+.res_title {
     width: 165px;
     height: 19px;
     font-family: Grange;
@@ -52,7 +52,7 @@
 
 }
 
-.text {
+.res_text {
     width: 231px;
     height: 286px;
     
@@ -62,6 +62,7 @@
     line-height: 24px;
     text-align: left;
 
+    margin-top: 16px;
 
 }
 
@@ -81,6 +82,7 @@
     height: 57px;
     gap: 6px;
     display: inline-block;
+    margin-top: 12px;
 }
 
 .title {
@@ -103,5 +105,59 @@
     font-weight: 500;
     line-height: 19.8px;
     text-align: center;
+
+}
+
+.next_icon {
+    width: 60.06px;
+    height: 60.06px;
+    top: 670px;
+    left: 1310px;
+    border-radius: 30.03px;
+    position: absolute;
+    
+    background: #EEF7FB;
+
+}
+
+.frame {
+    width: 16.01px;
+    height: 16.02px;
+    top: 22.02px;
+    left: 22.02px;
+    position: absolute;
+    
+}
+
+.the_icon {
+    width: 9.61px;
+    height: 16.02px;
+    top: 16.02px;
+    left: 14.41px;
+    border: 0.16px;
+    
+
+}
+
+.ellipse_container {
+    background-color: blue;
+
+    width: 43px;
+    height: 9px;
+    top: 923px;
+    left: 699px;
+    gap: 8px;
+    position: absolute;
+    display: flex;
+
+}
+
+.ellipse {
+    width: 9px;
+    height: 9px;
+    background-color: beige;
+    border-radius: 50% / 100%;
+
+    /* position: absolute; */
 
 }
