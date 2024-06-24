@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Slider from "react-slick";
 import axios from "axios";
 import "../styles/Results.css";
 import result_page_img from "../assets/result_page_img.jpg";
@@ -90,8 +89,7 @@ const Results = () => {
                 moment of calm to the end of your day.
               </div>
             </div>
-            {/* Using Link for navigation */}
-            <button className="res_start_button">
+            <button className="retart_button">
               <Link to="/">
                 <span className="res_button_text">Retake the quiz</span>
               </Link>

@@ -10,15 +10,15 @@ html,
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 1440px;
+  width: auto;
   height: 526px;
 }
 
 .image-container {
-  position: relative;
+  position: absolute;
   display: inline-block;
   height: 536px;
+  width: 100%;
 }
 
 .image-container::before {
@@ -33,15 +33,16 @@ html,
 }
 
 .image-container img {
+  width: 100%;
   display: block;
-  position: relative;
+  position: absolute;
   z-index: 0;
+  
 }
 
 .top-image {
   width: 90rem;
   height: 32.875rem;
-  top: -10px;
 }
 
 .centered-div {
@@ -99,7 +100,7 @@ html,
   color: #1c2635;
 }
 
-.home-button-text {
+.button-text {
   font-family: Proxima Nova;
   font-size: 16px;
   font-weight: 500;

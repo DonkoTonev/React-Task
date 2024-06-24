@@ -87,6 +87,9 @@ const ProductSlider = ({ products }) => {
                         wishlist.includes(product.id) ? "active" : ""
                       }`}
                       icon={faHeart}
+                      style={{
+                        color: wishlist.includes(product.id) ? "#FF0090" : "#000",
+                      }}
                     />
                   </button>
                 </div>
@@ -112,13 +115,11 @@ const ProductSlider = ({ products }) => {
                 <FontAwesomeIcon className="the_icon" icon={faChevronRight} />
               </svg>
             </div>
-            {currentIndex > 0 && (
               <div className="prev_icon" onClick={handlePrev}>
                 <svg className="frame">
                   <FontAwesomeIcon className="the_icon" icon={faChevronLeft} />
                 </svg>
               </div>
-            )}
           </>
         )}
       </div>
@@ -129,6 +130,9 @@ const ProductSlider = ({ products }) => {
             <div
               key={index}
               className={`ellipse ${index === currentIndex ? "active" : ""}`}
+              style={{
+                backgroundColor: index === currentIndex ? "#5BC1ED" : "#E3E3E3",
+              }}
             ></div>
           )
         )}

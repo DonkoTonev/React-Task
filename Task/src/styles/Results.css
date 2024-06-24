@@ -38,15 +38,15 @@ html,
 .res_home_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 1440px;
-  height: 539px;
+  width: auto;
+  height: 526px;
 }
 
 .res_image_container {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  height: 542px;
+  height: 536px;
+  width: 100%;
 }
 
 .res_image_container::before {
@@ -55,31 +55,36 @@ html,
   top: 0;
   left: 0;
   width: 100%;
-  height: 542px;
+  height: 100%;
   background: #00000059;
   z-index: 1;
 }
 
 .res_image_container img {
+  width: 100%;
   display: block;
-  position: relative;
+  position: absolute;
   z-index: 0;
+  
 }
 
 .res_centered_div {
   width: 585px;
   height: 330px;
-  top: 91px;
-  left: 429px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   gap: 32px;
   z-index: 2;
   color: white;
-  position: absolute;
-
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
+  border-radius: 8px;
 }
+
+
 
 .res_top_image {
   width: 90rem;
@@ -112,21 +117,23 @@ html,
   text-align: center;
   margin: 0 auto;
   margin-top: 32px;
+  gap: 32px;
+  display: flex;
 }
 
-.res_start_button {
-  margin-top: 32px;
-  width: 238px;
+.retart_button {
+  /* width: 100%; */
   height: 47px;
   padding: 14px 40px;
   border-radius: 8px;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 20px;
   border: 1px solid #ffffff;
   background-color: transparent;
+
+  
 }
 
 .res_button_text {
