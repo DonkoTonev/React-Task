@@ -36,7 +36,6 @@ html,
   display: block;
   position: absolute;
   z-index: 0;
-  
 }
 
 .res_centered_div {
@@ -54,8 +53,6 @@ html,
   color: white;
   border-radius: 8px;
 }
-
-
 
 .res_top_image {
   width: 90rem;
@@ -103,8 +100,6 @@ html,
   gap: 20px;
   border: 1px solid #ffffff;
   background-color: transparent;
-
-  
 }
 
 .res_button_text {
