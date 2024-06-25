@@ -53,17 +53,6 @@ const Results = () => {
     }
   }, [products]);
 
-  const handleWishlistToggle = (product) => {
-    let updatedWishlist = [];
-    if (wishlist.find((item) => item.id === product.id)) {
-      updatedWishlist = wishlist.filter((item) => item.id !== product.id);
-    } else {
-      updatedWishlist = [...wishlist, product];
-    }
-    setWishlist(updatedWishlist);
-    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
-  };
-
   return (
     <div>
       <div className="res_home_container">
@@ -77,9 +66,7 @@ const Results = () => {
             <div className="res_title_container">
               Build you everyday self care routine.
               <div className="res_text_container">
-                Perfect for if you're looking for soft, nourished skin, our
-                moisturizing body washes are made with skin-natural nutrients
-                that work with your skin to replenish moisture. With a light
+                Perfect for if you're looking for soft, nourished skin, our moisturizing body washes are made with skin-natural nutrients that work with your skin to replenish moisture. With a light formula, the bubbly lather leaves your skin feeling cleansed and cared for. And by choosing relaxing fragrances you can add a moment of calm to the end of your day.
               </div>
             </div>
             <button className="retart_button">
