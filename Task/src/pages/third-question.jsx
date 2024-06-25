@@ -5,18 +5,18 @@ import ProgressBar from "./components/progress-bar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function FirstQuestion() {
+export default function ThirdQuestion() {
   const [answer, setAnswer] = useState("");
 
   useEffect(() => {
     const storedAnswers = JSON.parse(localStorage.getItem("answers")) || {};
-    setAnswer(storedAnswers.firstQuestion || "");
+    setAnswer(storedAnswers.thirdQuestion || "");
   }, []);
 
   const handleAnswer = (answer) => {
     setAnswer(answer);
     const storedAnswers = JSON.parse(localStorage.getItem("answers")) || {};
-    storedAnswers.firstQuestion = answer;
+    storedAnswers.thirdQuestion = answer;
     localStorage.setItem("answers", JSON.stringify(storedAnswers));
   };
 
