@@ -6,35 +6,6 @@ html,
   height: 100%;
 }
 
-.product-card {
-  padding: 16px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  margin: 10px;
-}
-
-.product-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.slick-slider {
-  max-width: 800px;
-  margin: auto;
-}
-
-.slick-list {
-  overflow: visible;
-}
-
-.slick-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .res_home_container {
   display: flex;
   flex-direction: column;
