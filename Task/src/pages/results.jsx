@@ -16,7 +16,6 @@ const Results = () => {
         const response = await axios.get(
           "https://jeval.com.au/collections/hair-care/products.json?page=1"
         );
-        console.log("Fetched products:", response.data.products);
         setProducts(response.data.products);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -24,14 +23,12 @@ const Results = () => {
     };
 
     const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    console.log("Stored wishlist:", storedWishlist);
     setWishlist(storedWishlist);
     fetchProducts();
   }, []);
 
   useEffect(() => {
     const storedAnswers = JSON.parse(localStorage.getItem("answers")) || {};
-    console.log("Stored answers:", storedAnswers);
 
     if (Object.keys(storedAnswers).length > 0) {
       const filtered = products.filter((product) => {
@@ -50,7 +47,6 @@ const Results = () => {
           return titleMatch || bodyMatch || tagsMatch;
         });
       });
-      console.log("Filtered products:", filtered);
       setFilteredProducts(filtered);
     } else {
       setFilteredProducts(products);
