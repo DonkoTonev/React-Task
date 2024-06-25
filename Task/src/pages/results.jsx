@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../styles/Results.css";
+import styles from "../styles/Results.module.css";
 import result_page_img from "../assets/result_page_img.jpg";
 import { Link } from "react-router-dom";
 import ProductSlider from "./components/product-slider";
@@ -65,18 +65,18 @@ const Results = () => {
   };
 
   return (
-    <div>
-      <div className="res_home_container">
+    <div className="outer_div">
+      <div className={styles.res_home_container}>
         <div className="res_image_container">
           <img
             src={result_page_img}
-            className="res_top_image"
+            className={styles.res_top_image}
             alt="Descriptive Alt Text"
           />
-          <div className="res_centered_div">
-            <div className="res_title_container">
+          <div className={styles.res_centered_div}>
+            <div className={styles.res_title_container}>
               Build you everyday self care routine.
-              <div className="res_text_container">
+              <div className={styles.res_text_container}>
                 Perfect for if you're looking for soft, nourished skin, our
                 moisturizing body washes are made with skin-natural nutrients
                 that work with your skin to replenish moisture. With a light
@@ -85,15 +85,15 @@ const Results = () => {
                 moment of calm to the end of your day.
               </div>
             </div>
-            <button className="retart_button">
+            <button className={styles.retart_button}>
               <Link to="/">
-                <span className="res_button_text">Retake the quiz</span>
+                <span className={styles.res_button_text}>Retake the quiz</span>
               </Link>
             </button>
           </div>
         </div>
       </div>
-      <ProductSlider products={filteredProducts} />
+      {/* <ProductSlider products={filteredProducts} /> */}
     </div>
   );
 };

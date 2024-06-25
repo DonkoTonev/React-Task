@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
-import "../styles/Question.css";
-import ProgressBar from "./components/progress-bar";
 import { Link } from "react-router-dom";
-import fontawesome from "@fortawesome/fontawesome";
+import styles from "../styles/Question.module.css";
+import ProgressBar from "./components/progress-bar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function FirstQuestion() {
-  const [count, setCount] = useState(0);
-
   const [answer, setAnswer] = useState("");
 
   useEffect(() => {
@@ -25,37 +21,34 @@ export default function FirstQuestion() {
   };
 
   return (
-    <>
-      <div className="container">
-        <div className="question">What's your hair type or texture?</div>
-        <div className="answers-container">
-          <button onClick={() => handleAnswer("Straight")} className="answer">
-            <span className="answer-text">a. Straight</span>
+    <div className={styles.outer_container}>
+      <div className={styles.container}>
+        <div className={styles.question}>What's your hair type or texture?</div>
+        <div className={styles.answers_container}>
+          <button onClick={() => handleAnswer("Straight")} className={styles.answer}>
+            <span className={styles.answer_text}>a. Straight</span>
           </button>
-          <button onClick={() => handleAnswer("Curly")} className="answer">
-            <span className="answer-text">b. Curly</span>
+          <button onClick={() => handleAnswer("Curly")} className={styles.answer}>
+            <span className={styles.answer_text}>b. Curly</span>
           </button>
-          <button onClick={() => handleAnswer("Wavy")} className="answer">
-            <span className="answer-text">c. Wavy</span>
+          <button onClick={() => handleAnswer("Wavy")} className={styles.answer}>
+            <span className={styles.answer_text}>c. Wavy</span>
           </button>
-          <button onClick={() => handleAnswer("Fine")} className="answer">
-            <span className="answer-text">d. Fine</span>
+          <button onClick={() => handleAnswer("Fine")} className={styles.answer}>
+            <span className={styles.answer_text}>d. Fine</span>
           </button>
         </div>
-
-        <div className="next-back">
-          <a href="/" className="back-link">
-            Back
-          </a>
-          <button className="button-next">
+        <div className={styles.next_back}>
+          <a href="/" className={styles.back_link}>Back</a>
+          <button className={styles.button_next}>
             <Link to="/second">
-              <span className="button-text">Next question</span>
+              <span className={styles.button_text}>Next question</span>
             </Link>
-            <FontAwesomeIcon className="arrow-icon" icon={faArrowRight} />
+            <FontAwesomeIcon className={styles.arrow_icon} icon={faArrowRight} />
           </button>
         </div>
       </div>
-      <ProgressBar current={1} total={5} />
-    </>
+      <ProgressBar current={1} total={5} className={styles.progress_bar} />
+    </div>
   );
 }
